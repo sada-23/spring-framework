@@ -1,2 +1,7 @@
-package tigthly_coupled;public class FullTimeMentor {
+package tigthly_coupled;
+
+public class FullTimeMentor {
+    public void createAccount(){
+        System.out.println("Full Time Mentor Account is created.");
+    }
 }

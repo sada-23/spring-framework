@@ -1,2 +1,5 @@
-package loosely_coupled;public interface Mentor {
+package loosely_coupled;
+
+public interface Mentor {
+    void createAccount();
 }

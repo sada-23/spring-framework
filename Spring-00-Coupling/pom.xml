@@ -7,6 +7,19 @@
     <groupId>com.company</groupId>
     <artifactId>Spring-00-Coupling</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
 
-    
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
 </project>
