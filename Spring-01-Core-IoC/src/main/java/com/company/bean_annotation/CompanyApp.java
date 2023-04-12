@@ -24,7 +24,11 @@ public class CompanyApp {
         ft.createAccount();
 
 
-        //@Bean(name = "p1") - if we have multiple options, we can specify a name of the bean we would like to be returned on @Configuration class
+
+        /*
+         * @Bean(name = "p1") - if we have multiple options, we can specify a name of the bean we would like to be returned
+         *                       on @Configuration class and pass it into parameter of getBean() method
+         */
         //PartTimeMentor pt = container.getBean("p1",PartTimeMentor.class);// First parameter is the name of the instance to which we refer.
 
         PartTimeMentor pt = container.getBean(PartTimeMentor.class);
