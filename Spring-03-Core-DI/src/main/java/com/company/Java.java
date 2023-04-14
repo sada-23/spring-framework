@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * · Starting with Spring version 4.3, when there is only one constructor in the class, @Autowired annotation can be omitted.
  *
  * · @Autowired : Spring container "injects" objects into other objects or “dependencies”
- *       · Constructor Injection:  ->  Injecting the values through the constructor
+ *       · Constructor Injection: Injecting the values through the constructor
  *       · Field Injection (Not recommended): Injecting one object to another object
  *
  */
