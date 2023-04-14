@@ -26,7 +26,7 @@ import org.springframework.stereotype.Component;
  *
  * 🦋 Eager and Lazy Instantiation
  * · When a container initializes (created), ALL Singleton BEANS are created automatically. It is DEFAULT behavior and called “eager instantiation”.
- * · We can use @Lazy annotation to prevent that. @Lazy will prevent creation of the beans until we refer them.
+ * · We can use @Lazy annotation to prevent that. @Lazy will prevent creation of the beans until we refer to them.
  *
  *
  *
