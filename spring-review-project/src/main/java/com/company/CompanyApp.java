@@ -1,7 +1,8 @@
 package com.company;
 
 import com.company.config.EmployeeConfig;
-import com.company.model.Employee;
+import com.company.repository.HoursRepository;
+import com.company.service.OvertimeSalaryService;
 import com.company.service.SalaryService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,6 +15,12 @@ public class CompanyApp {
 
         SalaryService salaryService = context.getBean(SalaryService.class);
         salaryService.calculateRegularSalary();
+
+        OvertimeSalaryService overtimeSalaryService = context.getBean(OvertimeSalaryService.class);
+        overtimeSalaryService.calculateOvertimeSalary();
+
+
+
 
 
 
