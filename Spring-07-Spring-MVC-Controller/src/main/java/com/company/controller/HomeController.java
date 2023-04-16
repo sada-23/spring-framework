@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * • The dispatcher servlet uses the handler mapping to find out what controller action to call.
  * • The dispatcher servlet calls the controller’s action.
  * • After executing the action associated with the HTTP request, the controller returns the view name (and data to view)
- *   the dispatcher servlet needs to render into the HTTP response.
+ *   that the dispatcher servlet needs to render into the HTTP response.
  * • The response sent back to the client.
  *
  *
