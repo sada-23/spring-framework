@@ -8,9 +8,13 @@
 <div align="center"> <!-- centering the body -->
 <body>
 <!---->
-<form th:object="${mentor}"> <!-- Bringing the empty mentor object into the view -->
+<!-- th:action="@{/mentor/confirm}" - means when we click on the "Register" button, navigate to this specific controller endpoint -->
+<!-- method="post" - means we send post method to this specific controller endpoint -->
+<form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}"> <!-- th:object="${mentor} - binding the empty mentor object into the view -->
     <label>First Name:</label>
-    <input type="text" id="firstName" th:field="*{firstName}"><br> <!-- saving firstName input into mentor object. Ex: mentor.setFirstName="Mike" -->
+    <!-- When mentor/register loads we see the empty form. MVC will call all the getter methods. Ex: mentor.getFirstName etc... -->
+    <!-- When mentor/confirm loads it sets the inputted values. MVC will call all the setter methods. Ex: mentor.setFirstName="Mike" etc... -->
+    <input type="text" id="firstName" th:field="*{firstName}"><br> <!-- saving firstName input into mentor object. -->
 
     <label>Last Name:</label>
     <input type="text" id="lastName" th:field="*{lastName}"><br> <!-- id is not mandatory field in here -->
