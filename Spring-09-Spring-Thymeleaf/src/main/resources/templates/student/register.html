@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Welcome to Register Page</h2>
+
+<!---->
+<!-- Display the value of model attributes - th:text ${attribute_key} -->
+<h2 th:text="${students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).lastName}"></h2>
+
+<!-- Concatenation -->
+<h2 th:text="${'Welcome '+students.get(0).firstName}"></h2>
+
+<!-- Link : Absolute URLs are used to build link that pointed to other servers -->
+<a th:href="@{https://www.amazon.com}">Amazon Home Page</a><br>
+<!-- Link : Relative URLs starting with / will be automatically prefixed by the application context name -->
+<a th:href="@{/student/welcome}">Welcome</a><br>
+
+<!-- Adding parameters to the link -->
+<a th:href="@{/student/welcome(id=3)}">Query Param</a><br>
+<a th:href="@{/student/welcome(id=${students.get(0).firstName})}">Query Param2</a><br>
+
+<!-- Iteration. th:each is used to achieve iteration -->
+<ul>
+    <li th:each="i: ${students}" th:text="${i.firstName}"></li>
+</ul>
+
+
+</body>
+</html>

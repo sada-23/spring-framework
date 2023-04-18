@@ -17,6 +17,10 @@ import java.util.List;
  *   We can add @RequestMapping("/mentor") and @RequestMapping("/another") annotations at class level so this way we can
  *   change the end point to avoid, getting an exception. Class level endpoint will be concatenated with method level endpoint
  *
+ *
+ * · src/main/resources/static - if the view is static Spring will look into static package
+ * · src/main/resources/templates - if the view is dynamic Spring will look into templates package
+ *
  */
 
 @Controller
@@ -36,6 +40,6 @@ public class MentorController$ {
 
 
 
-        return "mentor/mentor-list";
+        return "mentor/mentor-list"; // it returns the view.
     }
 }
