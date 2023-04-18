@@ -36,7 +36,7 @@ public class MentorController$ {
         mentorList.add(new Mentor("Ellen", "River", 33, "Female"));
         mentorList.add(new Mentor("Jessica", "Forest", 50, "Female"));
 
-        model.addAttribute("mentorList", mentorList);
+        model.addAttribute("mentors", mentorList);
 
 
 

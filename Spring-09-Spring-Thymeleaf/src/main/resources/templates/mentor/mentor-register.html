@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<div align="center"> <!-- centering the body -->
+<body>
+<!---->
+<form th:object="${mentor}"> <!-- Bringing the empty mentor object into the view -->
+    <label>First Name:</label>
+    <input type="text" id="firstName" th:field="*{firstName}"><br> <!-- saving firstName input into mentor object. Ex: mentor.setFirstName="Mike" -->
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName" th:field="*{lastName}"><br> <!-- id is not mandatory field in here -->
+
+    <label>Email:</label>
+    <input type="email" id="email" th:field="*{email}"><br>
+
+    <label>Graduated:</label>
+    <input type="checkbox" th:field="*{graduated}"><br> <!-- checkbox -->
+
+    <label>Gender:</label>
+    <input type="radio" value="Male" th:field="*{gender}">Male <!-- radio button -->
+    <input type="radio" value="Female" th:field="*{gender}">Female<br>
+
+    <label>Batch Number:</label>
+    <select th:field="*{batch}"> <!-- It should be specified which field will have the iteration -->
+        <!-- th:value="${eachBatch}" takes selected value and assign it to the *{batch} field -->
+        <option th:each="eachBatch : ${batchList}" th:value="${eachBatch}" th:text="${eachBatch}"></option>
+    </select> <br>
+
+    <label>Company:</label>
+    <textarea th:field="*{company}"></textarea><br> <!-- Text box -->
+
+    <button type="submit">Register</button> <!-- Button-->
+
+
+</form>
+
+</body>
+</div>
+
+</html>

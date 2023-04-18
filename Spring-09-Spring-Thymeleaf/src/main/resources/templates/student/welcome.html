@@ -20,7 +20,7 @@
 <!--Insert the images-->
 <img th:src="@{/images/welcome-38249.png}">
 
-<!-- Calling the fragments from diff html file -->
+<!-- th:replace : replaces the current tag with the tag defining the fragment -->
 <div th:replace="/fragments/index :: footer-menu"></div>
 <div th:replace="/fragments/index :: main-menu "></div>
 </body>
