@@ -37,9 +37,9 @@ public class MentorController {
 
     /*
      *
-     * · @ModelAttribute("attributeName") -> we pass name of the attribute that we like capture.
+     * · @ModelAttribute("attributeName") -> We pass the attribute name of the object  we like to capture.
      *    Ex: @ModelAttribute("mentor") Mentor mentor -> we bring the mentor object from @GetMapping("register") annotated method.
-     * · With this post method with submit the form and capturing the data
+     * · With the post method, we submit the form and capture the data.
      *
      * · return "redirect:/mentor/register"; -> Data will be posted, but it will come back in an empty form. We redirect from one endpoint to another
      */

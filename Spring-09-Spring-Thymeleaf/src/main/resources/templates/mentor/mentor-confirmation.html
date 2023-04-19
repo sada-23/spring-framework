@@ -7,7 +7,7 @@
 
 <div align="center">
 <body>
-<!-- Attribute name "mentor" comes from @PostMapping("/confirm") method as we passed it into @ModelAttribute("mentor") -->
+<!-- The attribute name "mentor" comes from the @PostMapping("/confirm") method, which we passed @ModelAttribute("mentor") as a parameter. -->
 <h2 th:text="${mentor.firstName}"></h2>
 <h2 th:text="${mentor.lastName}"></h2>
 <h2 th:text="${mentor.email}"></h2>
