@@ -17,7 +17,7 @@ public class Region extends BaseEntity{
     private String region;
     private String country;
 
-    @OneToOne(mappedBy = "region") // mappedBy = "region" means dont create employee column in Region Table (foreign key), create it in employee Table
+    @OneToOne(mappedBy = "region") // mappedBy = "region" means we dont create employee column in Region Table (foreign key), create it in employee Table
     private Employee employee;
 
     public Region(String region, String country) {

@@ -16,8 +16,12 @@ import java.time.LocalDate;
  *        private Department department;
  *
  *
- * · @JoinColumn(name = "") annotation modifies field name.
- * ·  @OneToOne(cascade = CascadeType.ALL) : will do actions at the same time employees object (Ex: Save, Remove...)
+ * · @JoinColumn(name = "") annotation modifies joined column field name.
+ *
+ * · Cascading -> @OneToOne(cascade = CascadeType.ALL) :
+ *      · Entity relationships often depend on the existence of another entity.
+ *      · When we perform some action on the target entity, the same action will be applied to the associated entity
+ *      · Different JPA Cascade Types: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH
  *
  */
 
