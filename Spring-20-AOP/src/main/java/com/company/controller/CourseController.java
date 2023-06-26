@@ -3,9 +3,12 @@ package com.company.controller;
 import com.company.annotation.Loggable;
 import com.company.dto.CourseDTO;
 import com.company.service.CourseService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/courses/api/v1")
@@ -13,7 +16,7 @@ public class CourseController {
 
     private final CourseService courseService;
 
-    //Logger logger = LoggerFactory.getLogger(CourseController.class);
+//    Logger logger = LoggerFactory.getLogger(CourseController.class);
 
     public CourseController(CourseService courseService) {
         this.courseService = courseService;
@@ -24,9 +27,9 @@ public class CourseController {
 
         // logger is get the info from our Business logic
 
-       // logger.info("Before -> Controller: {} - Method {} "," CourseController","getCourses()");
+//        logger.info("Before -> Controller: {} - Method {} "," CourseController","getCourses()"); // curly braces is mandatory
         List<CourseDTO> list = courseService.getCourses();
-      //  logger.info("After -> Controller: {} - Method : {} - Output : {}"," CourseController","getCourses()", list.toString());
+//        logger.info("After -> Controller: {} - Method : {} - Output : {}"," CourseController","getCourses()", list.toString());
         return list;
     }
 
